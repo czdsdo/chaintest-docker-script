@@ -85,10 +85,10 @@ function startZabbixAgent(){
 function getEvalExample(){
     # #下载需要镜像
     # #下载最新zabbix-agent、agent初始化镜像
-     docker pull $REGISTRY/zabbix-agent:new
+     docker pull $REGISTRY/zabbix-agent-wutong:new
      docker rmi zabbix-agent:latest
-     docker tag $REGISTRY/zabbix-agent:new zabbix-agent:latest
-     docker rmi $REGISTRY/zabbix-agent:new
+     docker tag $REGISTRY/zabbix-agent-wutong:new zabbix-agent:latest
+     docker rmi $REGISTRY/zabbix-agent-wutong:new
 
     
     # #安装git、tcpdump
@@ -99,9 +99,9 @@ function getEvalExample(){
     git clone -b dev.wutong https://github.com/czdsdo/chaintest-docker-script.git
     #git clone -b  https://gitee.com/wangyi0559/tchaintest-yuelian.git
     #移动需要文件
-    mv /chain/chaintest-docker-script/wutong/config/config.yaml /chain/config.yaml 
-    mv /chain/chaintest-docker-script/wutong/config/channel /chain/channel 
-    mv /chain/chaintest-docker-script/scripts /chain/scripts
+    mv /chain/chaintest-docker-script/chaintest-yuelian/wutong/config/config.yaml /chain/config.yaml 
+    mv /chain/chaintest-docker-script/chaintest-yuelian/wutong/config/channel /chain/channel 
+    mv /chain/chaintest-docker-script/chaintest-yuelian/scripts /chain/scripts
 
     # rm /home/test/go/src/mongo-chaintesting/main.go
     # mv /chain/scripts/main.go /home/test/go/src/mongo-chaintesting
@@ -115,22 +115,22 @@ function getEvalExample(){
 #配置相关执行脚本
 function configEvalScript(){
     #/chain/Create.sh
-    mv /chain/chaintest-docker-script/Create.sh /chain/Create.sh
+    mv /chain/chaintest-docker-script/chaintest-yuelian/Create.sh /chain/Create.sh
     cp /chain/Create.sh /chain/CreateTaskCommand.sh
     #/chain/Init.sh
-    mv /chain/chaintest-docker-script/Init.sh /chain/Init.sh
+    mv /chain/chaintest-docker-script/chaintest-yuelian/Init.sh /chain/Init.sh
     cp /chain/Init.sh /chain/InitTaskCommand.sh
     #/chain/SendTransaction.sh
-    mv /chain/chaintest-docker-script/SendTransaction.sh /chain/SendTransaction.sh
+    mv /chain/chaintest-docker-script/chaintest-yuelian/SendTransaction.sh /chain/SendTransaction.sh
     cp /chain/SendTransaction.sh /chain/SendTransactionTaskCommand.sh
     #/chain/ChangeStatus.sh
-    mv /chain/chaintest-docker-script/ChangeStatus.sh /chain/ChangeStatus.sh
+    mv /chain/chaintest-docker-script/chaintest-yuelian/ChangeStatus.sh /chain/ChangeStatus.sh
     cp /chain/ChangeStatus.sh /chain/ChangeStatusTaskCommand.sh
     #/chain/DisConnection.sh
-    mv /chain/chaintest-docker-script/DisConnection.sh /chain/DisConnection.sh
+    mv /chain/chaintest-docker-script/chaintest-yuelian/DisConnection.sh /chain/DisConnection.sh
     cp /chain/DisConnection.sh /chain/DisConnectionTaskCommand.sh
     #/chain/AssConnection.sh
-    mv /chain/chaintest-docker-script/AssConnection.sh /chain/AssConnection.sh
+    mv /chain/chaintest-docker-script/chaintest-yuelian/AssConnection.sh /chain/AssConnection.sh
     cp /chain/AssConnection.sh /chain/AssConnectionTaskCommand.sh
 }
 
