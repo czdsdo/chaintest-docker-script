@@ -93,12 +93,12 @@ RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shan
 RUN echo 0 > /now && \
     echo -2 > /height && \
     echo 0 > /status && \
-    echo "UserParameter=chain.height,sudo /bin/bash /getHeight.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_fabric.conf && \
-    echo "UserParameter=chain.TaskStatus,sudo /bin/bash /getStatus.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_fabric.conf && \
-    echo "UserParameter=chain.block,sudo /bin/bash /getBlock.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_fabric.conf && \
-    echo "UserParameter=chain.net,sudo /bin/bash /getNet.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_fabric.conf && \
-    echo "UserParameter=chain.logs,sudo /bin/bash /getLogs.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_fabric.conf && \
-    echo "UserParameter=chain.disk,sudo /bin/bash /getDisk.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_fabric.conf && \
+    echo "UserParameter=chain.height,sudo /bin/bash /getHeight.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_wutong.conf && \
+    echo "UserParameter=chain.TaskStatus,sudo /bin/bash /getStatus.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_wutong.conf && \
+    echo "UserParameter=chain.block,sudo /bin/bash /getBlock.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_wutong.conf && \
+    echo "UserParameter=chain.net,sudo /bin/bash /getNet.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_wutong.conf && \
+    echo "UserParameter=chain.logs,sudo /bin/bash /getLogs.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_wutong.conf && \
+    echo "UserParameter=chain.disk,sudo /bin/bash /getDisk.sh" >> /etc/zabbix/zabbix_agentd.d/zabbix_wutong.conf && \
     mkdir /chain && \
     echo '#!/bin/bash' > /chain/create.sh && \
     echo 'echo 000' >> /chain/create.sh && \
