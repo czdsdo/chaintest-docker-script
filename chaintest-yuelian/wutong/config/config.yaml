@@ -1,0 +1,15 @@
+Self:
+    Id: "IP_num"
+    Addr: "IP_self:60000"
+Members:
+    Peers:
+        - Id: "1"
+          Addr: "IP_P0O1:60000"
+        - Id: "2"
+          Addr: "IP_P1O1:60000"
+        - Id: "3"
+          Addr: "IP_P2O1:60000"
+        - Id: "4"
+          Addr: "IP_P3O1:60000"
+        - Id: "5"
+          Addr: "IP_P4O1:60000"
