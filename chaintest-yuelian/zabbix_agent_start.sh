@@ -90,44 +90,18 @@ function getEvalExample(){
      docker tag $REGISTRY/zabbix-agent:new zabbix-agent:latest
      docker rmi $REGISTRY/zabbix-agent:new
 
-    # docker pull $REGISTRY/eval-init:latest
-    # docker tag $REGISTRY/eval-init:latest eval-init:latest
-    # docker rmi $REGISTRY/eval-init:latest
-    # #ca
-    # docker pull $REGISTRY/fabric-ca:v1.0.0 
-    # docker tag $REGISTRY/fabric-ca:v1.0.0 fabric-ca:v1.0.0
-    # docker rmi $REGISTRY/fabric-ca:v1.0.0
-    # #orderer
-    # docker pull $REGISTRY/fabric-orderer:v1.0.0 
-    # docker tag $REGISTRY/fabric-orderer:v1.0.0 fabric-orderer:v1.0.0
-    # docker rmi $REGISTRY/fabric-orderer:v1.0.0
-    # #peer
-    # docker pull $REGISTRY/fabric-peer:v1.0.0 
-    # docker tag $REGISTRY/fabric-peer:v1.0.0 fabric-peer:v1.0.0
-    # docker rmi $REGISTRY/fabric-peer:v1.0.0
-
-    # docker pull $REGISTRY/fabric-ccenv:x86_64-1.0.0 
-	# docker tag $REGISTRY/fabric-ccenv:x86_64-1.0.0 hyperledger/fabric-ccenv:x86_64-1.0.0 
-	# docker rmi $REGISTRY/fabric-ccenv:x86_64-1.0.0 
-
-    # docker pull $REGISTRY/fabric-baseos:x86_64-0.3.1 
-	# docker tag $REGISTRY/fabric-baseos:x86_64-0.3.1 hyperledger/fabric-baseos:x86_64-0.3.1 
-	# docker rmi $REGISTRY/fabric-baseos:x86_64-0.3.1 
-    # #sdk
-     docker pull $REGISTRY/eval:old 
-     docker rmi eval:latest
-     docker tag $REGISTRY/eval:old eval:latest
-     docker rmi $REGISTRY/eval:old
+    
     # #安装git、tcpdump
     # apt-get update 
     # apt-get install -y -qq git tcpdump
     #git克隆工程
     cd /chain
-    git clone https://gitee.com/wangyi0559/tchaintest-yuelian.git
+    git clone -b dev.wutong https://github.com/czdsdo/chaintest-docker-script.git
+    #git clone -b  https://gitee.com/wangyi0559/tchaintest-yuelian.git
     #移动需要文件
-    mv /chain/tchaintest-yuelian/fabric/config/config.json /chain/config.json 
-    mv /chain/tchaintest-yuelian/fabric/config/channel /chain/channel 
-    mv /chain/tchaintest-yuelian/scripts /chain/scripts
+    mv /chain/chaintest-docker-script/wutong/config/config.yaml /chain/config.yaml 
+    mv /chain/chaintest-docker-script/wutong/config/channel /chain/channel 
+    mv /chain/chaintest-docker-script/scripts /chain/scripts
 
     # rm /home/test/go/src/mongo-chaintesting/main.go
     # mv /chain/scripts/main.go /home/test/go/src/mongo-chaintesting
@@ -141,22 +115,22 @@ function getEvalExample(){
 #配置相关执行脚本
 function configEvalScript(){
     #/chain/Create.sh
-    mv /chain/tchaintest-yuelian/Create.sh /chain/Create.sh
+    mv /chain/chaintest-docker-script/Create.sh /chain/Create.sh
     cp /chain/Create.sh /chain/CreateTaskCommand.sh
     #/chain/Init.sh
-    mv /chain/tchaintest-yuelian/Init.sh /chain/Init.sh
+    mv /chain/chaintest-docker-script/Init.sh /chain/Init.sh
     cp /chain/Init.sh /chain/InitTaskCommand.sh
     #/chain/SendTransaction.sh
-    mv /chain/tchaintest-yuelian/SendTransaction.sh /chain/SendTransaction.sh
+    mv /chain/chaintest-docker-script/SendTransaction.sh /chain/SendTransaction.sh
     cp /chain/SendTransaction.sh /chain/SendTransactionTaskCommand.sh
     #/chain/ChangeStatus.sh
-    mv /chain/tchaintest-yuelian/ChangeStatus.sh /chain/ChangeStatus.sh
+    mv /chain/chaintest-docker-script/ChangeStatus.sh /chain/ChangeStatus.sh
     cp /chain/ChangeStatus.sh /chain/ChangeStatusTaskCommand.sh
     #/chain/DisConnection.sh
-    mv /chain/tchaintest-yuelian/DisConnection.sh /chain/DisConnection.sh
+    mv /chain/chaintest-docker-script/DisConnection.sh /chain/DisConnection.sh
     cp /chain/DisConnection.sh /chain/DisConnectionTaskCommand.sh
     #/chain/AssConnection.sh
-    mv /chain/tchaintest-yuelian/AssConnection.sh /chain/AssConnection.sh
+    mv /chain/chaintest-docker-script/AssConnection.sh /chain/AssConnection.sh
     cp /chain/AssConnection.sh /chain/AssConnectionTaskCommand.sh
 }
 
