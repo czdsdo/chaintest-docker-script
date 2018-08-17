@@ -19,7 +19,8 @@ function chooseScript(){
        
         1|2|3|4|5)  {
             sleep $PEER_INDEX
-            /bin/bash /chain/chaintest-yuelian/wutong/start/wutong_peer_start.sh 
+            sudo chmod +x  /home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/peer
+            /home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/peer init
         }
         ;;
         *)  echo 'error'
@@ -30,38 +31,38 @@ function configConfigJson(){
     case $PEER_INDEX in
        
         1)  {
-             sed -i "s/IP_self/$IP_P0O1/g" /chain/config.yaml
-             sed -i "s/IP_num/$PEER_INDEX/g" /chain/config.yaml
+             sed -i "s/IP_self/$IP_P0O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+             sed -i "s/IP_num/$PEER_INDEX/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
         }
         ;;
         2)  {
-             sed -i "s/IP_self/$IP_P1O1/g" /chain/config.yaml
-             sed -i "s/IP_num/$PEER_INDEX/g" /chain/config.yaml
+             sed -i "s/IP_self/$IP_P1O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+             sed -i "s/IP_num/$PEER_INDEX/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
         }
         ;;
         3)  {
-             sed -i "s/IP_self/$IP_P2O1/g" /chain/config.yaml
-             sed -i "s/IP_num/$PEER_INDEX/g" /chain/config.yaml
+             sed -i "s/IP_self/$IP_P2O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+             sed -i "s/IP_num/$PEER_INDEX/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
         }
         ;;
         4)  {
-             sed -i "s/IP_self/$IP_P3O1/g" /chain/config.yaml
-             sed -i "s/IP_num/$PEER_INDEX/g" /chain/config.yaml
+             sed -i "s/IP_self/$IP_P3O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+             sed -i "s/IP_num/$PEER_INDEX/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
         }
         ;;
         5)  {
-             sed -i "s/IP_self/$IP_P4O1/g" /chain/config.yaml
-             sed -i "s/IP_num/$PEER_INDEX/g" /chain/config.yaml
+             sed -i "s/IP_self/$IP_P4O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+             sed -i "s/IP_num/$PEER_INDEX/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
         }
         ;;
         *)  echo 'error'
         ;;
     esac
-    sed -i "s/IP_P0O1/$IP_P0O1/g" /chain/config.yaml
-    sed -i "s/IP_P1O1/$IP_P1O1/g" /chain/config.yaml
-    sed -i "s/IP_P2O1/$IP_P2O1/g" /chain/config.yaml
-    sed -i "s/IP_P3O1/$IP_P3O1/g" /chain/config.yaml
-    sed -i "s/IP_P4O1/$IP_P4O1/g" /chain/config.yaml
+    sed -i "s/IP_P0O1/$IP_P0O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+    sed -i "s/IP_P1O1/$IP_P1O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+    sed -i "s/IP_P2O1/$IP_P2O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+    sed -i "s/IP_P3O1/$IP_P3O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
+    sed -i "s/IP_P4O1/$IP_P4O1/g"/home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
 }
 sleep 1s
 configConfigJson >/dev/null 2>&1

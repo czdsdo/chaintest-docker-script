@@ -77,7 +77,8 @@ func readstring(path string) string {
 	return string(fd)
 }
 func httpGet(blockid int) ([]byte, error) {
-	resp, err := http.Get("http://127.0.0.1:8080/api/getInfo?blockId=" + strconv.Itoa(blockid))
+	resp, err := http.Get("http://119.27.168.192:9999/getblockbyheight?number=" + strconv.Itoa(blockid))                   
+	// resp, err := http.Get("http://127.0.0.1:8080/api/getInfo?blockId=" + strconv.Itoa(blockid))
 	if err != nil {
 		return nil, err
 	}
