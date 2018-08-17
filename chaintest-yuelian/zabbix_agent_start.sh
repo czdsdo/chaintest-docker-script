@@ -85,11 +85,15 @@ function startZabbixAgent(){
 function getEvalExample(){
     # #下载需要镜像
     # #下载最新zabbix-agent、agent初始化镜像
-     docker pull $REGISTRY/zabbix-agent-wutong:new
-     docker rmi zabbix-agent:latest
-     docker tag $REGISTRY/zabbix-agent-wutong:new zabbix-agent:latest
-     docker rmi $REGISTRY/zabbix-agent-wutong:new
-
+    #  docker pull $REGISTRY/zabbix-agent-wutong:new
+    #  docker rmi zabbix-agent:latest
+    #  docker tag $REGISTRY/zabbix-agent-wutong:new zabbix-agent:latest
+    #  docker rmi $REGISTRY/zabbix-agent-wutong:new
+    docker pull $REGISTRY/zabbix-agent:new
+    docker rmi zabbix-agent:latest
+    docker tag $REGISTRY/zabbix-agent:new zabbix-agent:latest
+    docker rmi $REGISTRY/zabbix-agent:new
+ 
     
     # #安装git、tcpdump
     # apt-get update 
