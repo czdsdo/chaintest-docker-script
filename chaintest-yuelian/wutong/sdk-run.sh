@@ -1,16 +1,16 @@
-#!/bin/sh
-#author:chenxu
-cd /home/ubuntu
-git clone -b dev.wutong https://gitee.com/czdyxs/chaintest-docker-script.git
-cd ./chaintest-docker-script
-git checkout dev.wutong
-cd  ./chaintest-yuelian/wutong/peer
-chmod +x peer
-cd -
-cd ./chaintest-yuelian/wutong/test
-chmod +x test
-cd -
-/bin/bash /home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/wutong_start.sh 5 172.27.0.128 172.27.0.28 172.27.0.30 172.27.0.65 172.27.0.84 172.27.0.64
+# #!/bin/sh
+# #author:chenxu
+# cd /home/ubuntu
+# git clone -b dev.wutong https://gitee.com/czdyxs/chaintest-docker-script.git
+# cd ./chaintest-docker-script
+# git checkout dev.wutong
+# cd  ./chaintest-yuelian/wutong/peer
+# chmod +x peer
+# cd -
+# cd ./chaintest-yuelian/wutong/test
+# chmod +x test
+# cd -
+# /bin/bash /home/ubuntu/chaintest-docker-script/chaintest-yuelian/wutong/wutong_start.sh 5 172.27.0.128 172.27.0.28 172.27.0.30 172.27.0.65 172.27.0.84 172.27.0.64
  
 IP_P0O1=$1
 IP_P1O1=$2
