@@ -22,7 +22,7 @@ function chooseScript(){
             source /etc/profile
             sudo chmod +x  /chain/chaintest-docker-script/chaintest-yuelian/wutong/peer/peer
             cd /chain/chaintest-docker-script/chaintest-yuelian/wutong/peer
-            ./peer init
+           # ./peer init
         }
         ;;
         *)  echo 'error'
