@@ -24,11 +24,12 @@ sudo rm $test/conf/config.yaml
 else
 echo "config.yaml文件不存在"
 fi
-sudo cp $test/config-copy.yaml $test/conf/config.yaml  
+sudo cp $test/conf/config-copy.yaml $test/conf/config.yaml  
 sed -i "s/IP_P0O1/$IP_P0O1/g"$test/conf/config.yaml
 sed -i "s/IP_P1O1/$IP_P1O1/g"$test/conf/config.yaml
 sed -i "s/IP_P2O1/$IP_P2O1/g"$test/conf/config.yaml
 sed -i "s/IP_P3O1/$IP_P3O1/g"$test/conf/config.yaml
 sed -i "s/IP_P4O1/$IP_P4O1/g"$test/conf/config.yaml
 kill `ps -A|grep httpservice_v1.|awk '{print $1}'`
+cd  $test
 nohup  $test/httpservice_v1 > nohup.out 2>&1
