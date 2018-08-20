@@ -18,12 +18,11 @@ function chooseScript(){
     case $PEER_INDEX in
        
         1|2|3|4|5)  {
-            sleep $PEER_INDEX
-            sudo su
+            #sleep $PEER_INDEX
             source /etc/profile
             sudo chmod +x  /chain/chaintest-docker-script/chaintest-yuelian/wutong/peer/peer
             cd /chain/chaintest-docker-script/chaintest-yuelian/wutong/peer
-            nohup ./peer init &
+            sudo nohup ./peer init &
         }
         ;;
         *)  echo 'error'
@@ -68,7 +67,10 @@ function configConfigJson(){
     sed -i "s/IP_P4O1/$IP_P4O1/g" /chain/chaintest-docker-script/chaintest-yuelian/wutong/peer/config.yaml
 }
 sleep 1s
-configConfigJson >/dev/null 2>&1
+configConfigJson 
+#>/dev/null 2>&1
+echo "Change success"
 sleep 1s
-chooseScript >/dev/null 2>&1
+chooseScript
+#>/dev/null 2>&1
 echo "success"
