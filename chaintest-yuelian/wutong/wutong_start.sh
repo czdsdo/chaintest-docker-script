@@ -19,10 +19,11 @@ function chooseScript(){
        
         1|2|3|4|5)  {
             sleep $PEER_INDEX
+            sudo su
             source /etc/profile
             sudo chmod +x  /chain/chaintest-docker-script/chaintest-yuelian/wutong/peer/peer
             cd /chain/chaintest-docker-script/chaintest-yuelian/wutong/peer
-           # ./peer init
+            nohup ./peer init &
         }
         ;;
         *)  echo 'error'
