@@ -20,7 +20,7 @@ IP_P4O1=$5
 test=/home/ubuntu/sdk1.2
 if [ -a "$test/conf/config.yaml" ]
 then
-sudo rm $test/conf/confiig.yaml
+sudo rm $test/conf/config.yaml
 else
 echo "config.yaml文件不存在"
 fi
