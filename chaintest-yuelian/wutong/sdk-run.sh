@@ -32,4 +32,4 @@ sed -i "s/IP_P3O1/$IP_P3O1/g" $test/conf/config.yaml
 sed -i "s/IP_P4O1/$IP_P4O1/g" $test/conf/config.yaml
 kill `ps -A|grep httpservice_v1.|awk '{print $1}'`
 cd  $test
-nohup  $test/httpservice_v1.2.10 > nohup.out 2>&1 &
+nohup  ./httpservice_v1.2.10 > nohup.out 2>&1 &
