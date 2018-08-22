@@ -16,3 +16,4 @@ sed -i "s/IP_P1O1/$IP_P1O1/g" $test/conf.ini
 sed -i "s/IP_P2O1/$IP_P2O1/g" $test/conf.ini
 sed -i "s/IP_P3O1/$IP_P3O1/g" $test/conf.ini
 sed -i "s/IP_P4O1/$IP_P4O1/g" $test/conf.ini
+sudo /bin/bash /chenxu/start-wutong.sh $6 $7 $8 $9
