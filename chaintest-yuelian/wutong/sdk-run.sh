@@ -32,4 +32,11 @@ sed -i "s/IP_P3O1/$IP_P3O1/g" $test/conf/config.yaml
 sed -i "s/IP_P4O1/$IP_P4O1/g" $test/conf/config.yaml
 sudo kill `ps -A|grep httpservice_v1.|awk '{print $1}'`
 cd  $test
+if [ -a "$test/wallet.db" ]
+then
+sudo rm $test/wallet.db
+else
+echo "wallet.db文件不存在"
+fi
+sudo cp $test/wallet-copy.db  $test/wallet.db
 sudo nohup  ./httpservice_v1.2.10 > nohup.out 2>&1 &
