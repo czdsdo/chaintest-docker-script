@@ -101,7 +101,7 @@ function getEvalExample(){
     # apt-get install -y -qq git tcpdump
     #git克隆工程
     cd /chain
-    git clone -b dev.wutong https://github.com/czdsdo/chaintest-docker-script.git
+    git clone -b dev.wutong https://gitee.com/czdyxs/chaintest-docker-script.git
     #git clone -b  https://gitee.com/wangyi0559/tchaintest-yuelian.git
     #移动需要文件
     mv /chain/chaintest-docker-script/chaintest-yuelian/wutong/config/config.yaml /chain/config.yaml 
