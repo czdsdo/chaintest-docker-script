@@ -49,9 +49,9 @@ func main() {
 
 		data, err := httpGet(blockinfo.BlockID)
 		if err != nil {
-			time.Sleep(1)
-			// continue
-			break
+			time.Sleep(5)
+			 continue
+			//break
 		}
 		var f interface{}
 		bson.UnmarshalJSON(data, &f)
