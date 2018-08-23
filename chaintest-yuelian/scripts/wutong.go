@@ -22,7 +22,7 @@ type BlockInfo struct {
 
 // URL 数据库链接地址
 const (
-	URL                 string = "mongodb://root:!Q2w3e$R@180.101.204.40:27017"
+	URL                 string = "mongodb://root:!Q2w3e$R@118.24.58.43:27017"
 	DBName              string = "chain"
 	CollectionNameBlock string = "block"
 )
