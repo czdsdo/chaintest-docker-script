@@ -17,14 +17,16 @@ import (
 // BlockInfo 块信息
 type BlockInfo struct {
 	BlockID   int                 `json:"height"`
+	IP        string              `json:"ip"`
 	TXs      interface{}         `json:"txs"`
 }
 
 // URL 数据库链接地址
 const (
-	URL                 string = "mongodb://root:!Q2w3e$R@180.101.204.40:27017"
+	URL                 string = "mongodb://root:!Q2w3e$R@118.24.58.43:27017"
 	DBName              string = "chain"
 	CollectionNameBlock string = "block"
+	IPPath string = "/wutong_IP"
 )
 
 func main() {
@@ -43,6 +45,7 @@ func main() {
 	var blockinfo BlockInfo
 
 	blockinfo.BlockID = 1
+	blockinfo.IP = readstring(IPPath)
 
 	for {
 		//blockinfo.CreatTime = bson.MongoTimestamp(time.Now().Unix())
