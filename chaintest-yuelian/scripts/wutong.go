@@ -25,7 +25,7 @@ type BlockInfo struct {
 const (
 	URL                 string = "mongodb://root:!Q2w3e$R@118.24.58.43:27017"
 	DBName              string = "chain"
-	CollectionNameBlock string = "block"
+	CollectionNameBlock string = "wutongblock"
 	IPPath string = "/wutong_IP"
 )
 
