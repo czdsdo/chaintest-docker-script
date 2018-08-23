@@ -18,6 +18,7 @@ IP_P2O1=$3
 IP_P3O1=$4
 IP_P4O1=$5
 test=/home/ubuntu/sdk1.2
+echo "$IP_P0O1/IP_P1O1/IP_P2O1/IP_P3O1/IP_P4O1">/wutong_IP
 if [ -a "$test/conf/config.yaml" ]
 then
 sudo rm $test/conf/config.yaml
