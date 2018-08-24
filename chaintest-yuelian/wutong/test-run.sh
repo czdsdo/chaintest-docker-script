@@ -19,7 +19,7 @@ sed -i "s/IP_P4O1/$IP_P4O1/g" $test/conf.ini
 cd $test
 if [ "$6" -eq "-1" ]
 then
-sudo nohup ./test stress -n 200 -t store   > nohup.out 2>&1 &
+sudo nohup ./test stress -n 300 -t store   > nohup.out 2>&1 &
 sleep ${9}s
 kill `jobs -l |grep "./test stress"|awk '{print $2}'`
 else
