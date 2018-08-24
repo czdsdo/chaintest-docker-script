@@ -16,4 +16,12 @@ sed -i "s/IP_P1O1/$IP_P1O1/g" $test/conf.ini
 sed -i "s/IP_P2O1/$IP_P2O1/g" $test/conf.ini
 sed -i "s/IP_P3O1/$IP_P3O1/g" $test/conf.ini
 sed -i "s/IP_P4O1/$IP_P4O1/g" $test/conf.ini
+cd $test
+if [ "$6" -eq "-1" ]
+then
+sudo nohup ./test stress -n 200 -t store   > nohup.out 2>&1 &
+sleep ${9}s
+kill `jobs -l |grep "./test stress"|awk '{print $2}'`
+else
 sudo /bin/bash /chenxu/start-wutong.sh $6 $7 $8 $9
+fi
