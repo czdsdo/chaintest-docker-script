@@ -10,7 +10,6 @@ import (
 
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"fmt"
 
 )
 
@@ -63,7 +62,6 @@ func main() {
 		if err != nil {
 			panic(err)
 		}
-		fmt.Printf("%+v\n", blockinfo)
 		blockinfo.BlockID++
 	}
 }
