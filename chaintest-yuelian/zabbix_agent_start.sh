@@ -78,9 +78,10 @@ function startZabbixAgent(){
     #暂停10s
     sleep 10s
     #初始化agent
-    docker run --rm --privileged=true \
-    --network=host \
-    eval-init:latest /bin/bash /init.sh $SERVER_IP_PORT $AGENT_IP 
+    # docker run --rm --privileged=true \
+    # --network=host \
+    # eval-init:latest
+   /bin/bash /chain/scripts/init.sh $SERVER_IP_PORT $AGENT_IP 
 }
 #获取及配置区块链
 function getEvalExample(){
