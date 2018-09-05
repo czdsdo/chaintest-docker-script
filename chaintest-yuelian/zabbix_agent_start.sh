@@ -81,6 +81,7 @@ function startZabbixAgent(){
 #      docker run --rm --privileged=true \
 #     --network=host \
 #     eval-init:latest 
+    apt-get install -y -qq jq
     /bin/bash /chain/scripts/init.sh $SERVER_IP_PORT $AGENT_IP
 }
 #获取及配置区块链
