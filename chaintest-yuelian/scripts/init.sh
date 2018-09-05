@@ -220,24 +220,24 @@ AVAILABLE_MEMORY=$(curl -s -X POST \
     }")
 
 # #chain height info
-# CHAIN_HEIGHT=$(curl -s -X POST \
-#     $SERVER_IP/api_jsonrpc.php \
-#     -H 'Content-Type:application/json' \
-#     -d "{
-#         \"jsonrpc\": \"2.0\",
-#         \"method\": \"item.create\",
-#         \"params\": {
-#             \"name\": \"chain height info\",
-#             \"key_\": \"chain.height\",
-#             \"hostid\": \"$HOST_ID\",
-#             \"type\": 0,
-#             \"value_type\": 3,
-#             \"interfaceid\": \"$INTERFACE_ID\",
-#             \"delay\": \"1s\"
-#         },
-#         \"auth\":\"$AUTH\",
-#         \"id\":0
-#     }")
+CHAIN_HEIGHT=$(curl -s -X POST \
+    $SERVER_IP/api_jsonrpc.php \
+    -H 'Content-Type:application/json' \
+    -d "{
+        \"jsonrpc\": \"2.0\",
+        \"method\": \"item.create\",
+        \"params\": {
+            \"name\": \"chain height info\",
+            \"key_\": \"chain.height\",
+            \"hostid\": \"$HOST_ID\",
+            \"type\": 0,
+            \"value_type\": 3,
+            \"interfaceid\": \"$INTERFACE_ID\",
+            \"delay\": \"1s\"
+        },
+        \"auth\":\"$AUTH\",
+        \"id\":0
+    }")
 
 #TaskStatus
 TASK_STATUS=$(curl -s -X POST \
@@ -259,7 +259,7 @@ TASK_STATUS=$(curl -s -X POST \
         \"id\":0
     }")
 
-# #chain block info
+#chain block info
 # CHAIN_BLOCK=$(curl -s -X POST \
 #     $SERVER_IP/api_jsonrpc.php \
 #     -H 'Content-Type:application/json' \
@@ -280,63 +280,63 @@ TASK_STATUS=$(curl -s -X POST \
 #     }")
 
 #chain net info
-CHAIN_NET=$(curl -s -X POST \
-    $SERVER_IP/api_jsonrpc.php \
-    -H 'Content-Type:application/json' \
-    -d "{
-        \"jsonrpc\": \"2.0\",
-        \"method\": \"item.create\",
-        \"params\": {
-            \"name\": \"chain net info\",
-            \"key_\": \"chain.net\",
-            \"hostid\": \"$HOST_ID\",
-            \"type\": 0,
-            \"value_type\": 4,
-            \"interfaceid\": \"$INTERFACE_ID\",
-            \"delay\": \"5s\"
-        },
-        \"auth\":\"$AUTH\",
-        \"id\":0
-    }")
+# CHAIN_NET=$(curl -s -X POST \
+#     $SERVER_IP/api_jsonrpc.php \
+#     -H 'Content-Type:application/json' \
+#     -d "{
+#         \"jsonrpc\": \"2.0\",
+#         \"method\": \"item.create\",
+#         \"params\": {
+#             \"name\": \"chain net info\",
+#             \"key_\": \"chain.net\",
+#             \"hostid\": \"$HOST_ID\",
+#             \"type\": 0,
+#             \"value_type\": 4,
+#             \"interfaceid\": \"$INTERFACE_ID\",
+#             \"delay\": \"5s\"
+#         },
+#         \"auth\":\"$AUTH\",
+#         \"id\":0
+#     }")
 
 #chain logs info
-CHAIN_LOGS=$(curl -s -X POST \
-    $SERVER_IP/api_jsonrpc.php \
-    -H 'Content-Type:application/json' \
-    -d "{
-        \"jsonrpc\": \"2.0\",
-        \"method\": \"item.create\",
-        \"params\": {
-            \"name\": \"chain logs info\",
-            \"key_\": \"chain.logs\",
-            \"hostid\": \"$HOST_ID\",
-            \"type\": 0,
-            \"value_type\": 4,
-            \"interfaceid\": \"$INTERFACE_ID\",
-            \"delay\": \"10s\"
-        },
-        \"auth\":\"$AUTH\",
-        \"id\":0
-    }")
+# CHAIN_LOGS=$(curl -s -X POST \
+#     $SERVER_IP/api_jsonrpc.php \
+#     -H 'Content-Type:application/json' \
+#     -d "{
+#         \"jsonrpc\": \"2.0\",
+#         \"method\": \"item.create\",
+#         \"params\": {
+#             \"name\": \"chain logs info\",
+#             \"key_\": \"chain.logs\",
+#             \"hostid\": \"$HOST_ID\",
+#             \"type\": 0,
+#             \"value_type\": 4,
+#             \"interfaceid\": \"$INTERFACE_ID\",
+#             \"delay\": \"10s\"
+#         },
+#         \"auth\":\"$AUTH\",
+#         \"id\":0
+#     }")
 #chain disk info
-CHAIN_DISK=$(curl -s -X POST \
-    $SERVER_IP/api_jsonrpc.php \
-    -H 'Content-Type:application/json' \
-    -d "{
-        \"jsonrpc\": \"2.0\",
-        \"method\": \"item.create\",
-        \"params\": {
-            \"name\": \"chain disk info\",
-            \"key_\": \"chain.disk\",
-            \"hostid\": \"$HOST_ID\",
-            \"type\": 0,
-            \"value_type\": 4,
-            \"interfaceid\": \"$INTERFACE_ID\",
-            \"delay\": \"10s\"
-        },
-        \"auth\":\"$AUTH\",
-        \"id\":0
-    }")
+# CHAIN_DISK=$(curl -s -X POST \
+#     $SERVER_IP/api_jsonrpc.php \
+#     -H 'Content-Type:application/json' \
+#     -d "{
+#         \"jsonrpc\": \"2.0\",
+#         \"method\": \"item.create\",
+#         \"params\": {
+#             \"name\": \"chain disk info\",
+#             \"key_\": \"chain.disk\",
+#             \"hostid\": \"$HOST_ID\",
+#             \"type\": 0,
+#             \"value_type\": 4,
+#             \"interfaceid\": \"$INTERFACE_ID\",
+#             \"delay\": \"10s\"
+#         },
+#         \"auth\":\"$AUTH\",
+#         \"id\":0
+#     }")
 # #chain Alllogs info
 # CHAIN_LOGS=$(curl -s -X POST \
 #     $SERVER_IP/api_jsonrpc.php \
