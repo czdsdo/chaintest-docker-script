@@ -6,7 +6,7 @@
 
 #参数传入zabbix server ip
 SERVER_IP="118.24.127.12"
-SERVER_IP_PORT="118.24.127.12:90"
+SERVER_IP_PORT="118.24.127.12:80"
 #zabbix agent ip
 #AGENT_IP=`ifconfig  | grep 'inet addr:' | grep -v '127.0.0.1' | grep -v '0.0.0.0' | grep -v '172.17.' | cut -d: -f2 | awk '{ print $1}'`
 AGENT_IP=`ifconfig | grep 'inet addr:172.27' | cut -d: -f2 | awk '{ print $1}'`
