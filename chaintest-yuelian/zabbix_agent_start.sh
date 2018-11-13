@@ -5,8 +5,8 @@
 #configEvalScript(测评系统根据被测对象提供的方法进行包装)
 
 #参数传入zabbix server ip
-SERVER_IP="118.24.127.12"
-SERVER_IP_PORT="118.24.127.12:80"
+SERVER_IP="172.27.0.85"
+SERVER_IP_PORT="172.27.0.85:80"
 #zabbix agent ip
 #AGENT_IP=`ifconfig  | grep 'inet addr:' | grep -v '127.0.0.1' | grep -v '0.0.0.0' | grep -v '172.17.' | cut -d: -f2 | awk '{ print $1}'`
 AGENT_IP=`ifconfig | grep 'inet addr:172.27' | cut -d: -f2 | awk '{ print $1}'`
