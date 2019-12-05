@@ -121,6 +121,7 @@ function getEvalExample(){
     # #安装git、tcpdump
     # apt-get update 
     # apt-get install -y -qq git tcpdump
+    apt-get install jq
     #git克隆工程
     cd /chain
     git clone https://gitee.com/wangyi0559/tchaintest-yuelian.git
