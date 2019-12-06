@@ -85,10 +85,10 @@ function startZabbixAgent(){
 function getEvalExample(){
     # #下载需要镜像
     # #下载最新zabbix-agent、agent初始化镜像
-     docker pull $REGISTRY/zabbix-agent:new
-     docker rmi zabbix-agent:latest
-     docker tag $REGISTRY/zabbix-agent:new zabbix-agent:latest
-     docker rmi $REGISTRY/zabbix-agent:new
+     #docker pull $REGISTRY/zabbix-agent:new
+    # docker rmi zabbix-agent:latest
+     #docker tag $REGISTRY/zabbix-agent:new zabbix-agent:latest
+     #docker rmi $REGISTRY/zabbix-agent:new
 
     # docker pull $REGISTRY/eval-init:latest
     # docker tag $REGISTRY/eval-init:latest eval-init:latest
